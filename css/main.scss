@@ -1,0 +1,70 @@
+body {
+  margin: 0;
+  font-family: "Lato", sans-serif;
+}
+
+/* The side navigation menu */
+.sidebar {
+  margin: 0;
+  padding: 0;
+  width: 250px;
+  background-color: #e8e8e8;
+  position: fixed;
+  height: 100%;
+}
+
+#navbar .topnav {
+  overflow: hidden;
+}
+
+/* Sidebar links */
+.sidebar a {
+  display: block;
+  color: black;
+  padding: 16px;
+  text-decoration: none;
+  text-align: center;
+  border: 1px solid #89beb3; /* Green border */
+}
+
+/* Active/current link */
+.sidebar a.active {
+  background-color: #625261;
+  color: white;
+}
+
+/* Links on mouse-over */
+.sidebar a:hover:not(.active) {
+  background-color: #db6400;
+  color: white;
+}
+
+/* Page content. The value of the margin-left property should match the value of the sidebar's width property */
+div.content {
+  margin-left: 250px;
+  padding: 1px 16px;
+  height: 1000px;
+}
+
+code {
+  font-family: Consolas, "courier new";
+  color: crimson;
+  background-color: #f1f1f1;
+  padding: 2px;
+  font-size: 105%;
+}
+
+@media screen and (max-width: 520px) {
+  div.main-body {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: "topnav" "main-section";
+  }
+  #navbar .topnav {
+    position: inherit;
+    width: 100%;
+  }
+  div.content {
+    margin-left: 0;
+  }
+}
