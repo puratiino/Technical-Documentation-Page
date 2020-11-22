@@ -14,12 +14,12 @@
     <div class="topnav sidebar">
      <header>
         <a class="active" href="#"><h1>Read Technical Document</h1></a>
-        <a href="#Sidebar_One" class="nav-link">Sidebar One</a>
-        <a href="#Sidebar_Two" class="nav-link">Sidebar Two</a>
-        <a href="#Sidebar_Three" class="nav-link">Sidebar Three</a>
-        <a href="#Sidebar_Fore" class="nav-link">Sidebar Fore</a>
-        <a href="#Sidebar_Five" class="nav-link">Sidebar Five</a>
-        <a href="#Sidebar_Six" class="nav-link">Sidebar Six</a>
+        <a href="#Box_Sizing" class="nav-link">Box Sizing</a>
+        <a href="#Text_Decoration" class="nav-link">Text Decoration</a>
+        <a href="#Font_Size" class="nav-link">Font Size</a>
+        <a href="#Display_Grid" class="nav-link">Display Grid</a>
+        <a href="#Transition_Color" class="nav-link">Transition Color</a>
+        <a href="#Justify_Content" class="nav-link">Justify Content</a>
      </header>
     </div>
  </nav>
@@ -27,88 +27,449 @@
   <!-- Page content -->
   <main id="main-doc">
   <div class="content">
-    <section class="main-section" id="Sidebar_One">
-        <header><h1>Sidebar One</h1></header>
-        <p>The starting state of the menu will appear collapsed on smaller screens, and will appear non-collapsed on larger screens. When toggled using the button below, the menu will change.</p>
-        <p>Make sure to keep all page content within the <code>#page-content-wrapper</code>. The top navbar is optional, and just for demonstration. Just create an element with the <code>#menu-toggle</code> ID which will toggle the menu when clicked.</p>
-        <p>The HTML <code>button</code> tag defines a clickable button.</p>
-            <p>The CSS <code>background-color</code> property defines the background color of an element.</p>
+    <section class="main-section" id="Box_Sizing">
+        <header><h1>Box Sizing</h1></header>
+        <p>The <code> box-sizing</code> property defines how the width and height of an element are calculated: should they include padding and borders, or not.</p>
+        <p>
+            <h3>Example</h3>
+            <p>Set the "universal box-sizing":</p>
+                <img src="./images/box-sizing.png" alt="Box Sizing Example">
+            </p>
+        <h2>CSS Syntax</h2>
+        <p><code>box-sizing: content-box|border-box|initial|inherit;</code></p>
+        
+  <table><tr>
+    <th style="width:20%">Value</th>
+    <th>Description</th>
+  </tr>  
+  <tr>
+    <td><strong> content-box</strong></td>
+    <td>Default. The width and height properties (and min/max properties) includes only the content. Border 
+    and padding are not included</td>
+  </tr>
+  <tr>
+    <td><strong> border-box</strong></td>
+    <td>The width and height properties (and min/max properties) includes 
+    content, padding and border</td>
+  </tr>
+  <tr>
+    <td><strong>initial</strong></td>
+    <td>Sets this property to its default value. <a href="css_initial.asp">Read about <em>initial</em></a></td>
+    </tr>
+  <tr>
+    <td><strong>inherit</strong></td>
+    <td>Inherits this property from its parent element. <a href="css_inherit.asp">Read about <em>inherit</em></a></td>
+    </tr>
+  </table>
             <ol>
-                <li>Coffee</li>
-                <li>Tea</li>
-                <li>Milk</li>
+                <li><a href="https://www.w3schools.com/cssref/tryit.asp?filename=trycss3_box-sizing3">See more Examples...</a></li>
+                <li><a href="https://www.w3schools.com/cssref/tryit.asp?filename=trycss3_box-sizing">See more Examples...</a></li>
+                
+            </ol>
+        </section>
+
+        <br>
+        <br>
+        <br>
+        <hr>      
+  </div>
+  <div class="content">
+    <section class="main-section" id="Text_Decoration">
+        <header><h1>Text Decoration</h1></header>
+        <p>The<code> text-decoration</code> property specifies the decoration added to text, and is a shorthand property for:</p>
+        <ul>
+            <li>text-decoration-line (required)</li>
+            <li>text-decoration-color</li>
+            <li>text-decoration-style</li>
+        </ul>
+        <h3>CSS Syntax</h3>
+        <p><code>text-decoration: text-decoration-line | text-decoration-color|text-decoration-style|initial|inherit;</code></p> 
+
+        <p><code>text-decoration: none;</code><span style="color: green;"> /*Removes lines from links (Võtab linkidelt jooned ära)*/</span></p>
+        
+
+    <table class="w3-table-all notranslate">
+            <tbody><tr>
+            <th style="width:25%">Value</th>
+            <th>Description</th>
+            </tr>  
+            <tr>
+            <td><strong>text-decoration-line</strong></td>
+            <td>Sets the kind of text decoration to use (like underline, overline, 
+            line-through)</td>
+            </tr>
+            <tr>
+            <td>
+            <strong>text-decoration-color</strong></td>
+            <td>Sets the color of the text decoration</td>
+            </tr>
+            <tr>
+            <td> <strong>text-decoration-style</strong></td>
+            <td>Sets the style of the text decoration (like solid, wavy, dotted, dashed, 
+            double)</td>
+            </tr>
+            <tr>
+            <td>initial</td>
+            <td>Sets this property to its default value. <a href="css_initial.asp">Read about <em>initial</em></a></td>
+            </tr>
+            <tr>
+            <td>inherit</td>
+            <td>Inherits this property from its parent element. <a href="css_inherit.asp">Read about <em>inherit</em></a></td>
+            </tr>
+        </tbody>
+        </table>
+        <ul>
+            <li><a href="https://www.w3schools.com/cssref/tryit.asp?filename=trycss_text-decoration">TEXT DECORATION Examples</a></li>
+            <li><a href="https://www.w3schools.com/cssref/tryit.asp?filename=trycss_text-decoration2">Example</a></li>
+        </ul>
+        <br>    
+        <hr>
+        <br>
+        <br>
+        <h1>List Style</h1>
+        <p>The<code>list-style </code> property is a shorthand for the following properties:</p>
+        <ul>
+            <li>list-style-type</li>
+            <li>list-style-position</li>
+            <li>list-style-image</li>
+        </ul>
+        <p>If one of the values are missing, the default value for that property will be used.</p>
+        
+        <p><code>list-style: none;</code> <span style="color: green;">/* Takes points from the list (Võtab listil punktid eest ära)*/</span></p>
+
+            <table class="w3-table-all notranslate">
+            <tbody><tr>
+            <th style="width:20%">Value</th>
+            <th>Description</th>
+            </tr>
+            <tr>
+            <td><i><strong>list-style-type</strong></i></td>
+            <td>Specifies the type of list-item marker. Default value is "disc"</td>
+            </tr>
+            <tr>
+            <td><i><strong>list-style-position</strong></i></td>
+            <td>Specifies where to place the list-item marker. Default value is 
+            "outside"</td>
+            </tr>
+            <tr>
+            <td><i><strong>list-style-image</strong></i></td>
+            <td>Specifies the type of list-item marker. Default value is "none"</td>
+            </tr>
+            <tr>
+            <td>initial</td>
+            <td>Sets this property to its default value. <a href="css_initial.asp">Read about <em>initial</em></a></td>
+            </tr>
+            <tr>
+            <td>inherit</td>
+            <td>Inherits this property from its parent element. <a href="css_inherit.asp">Read about <em>inherit</em></a></td>
+            </tr>
+            </tbody></table>
+        <br>
+        <h3>Css Syntax</h3>
+        <p><code>list-style: list-style-type list-style-position list-style-image|initial|inherit;</code></p>
+            <ol>
+                <li><a href="https://www.w3schools.com/cssref/tryit.asp?filename=trycss_list-style-type_ex">See List STYLE Examples...</a></li>
+                <li><a href="https://www.w3schools.com/cssref/tryit.asp?filename=trycss_list-style-position">See List STYLE Examples...</a></li>
             </ol>
         </section>
   </div>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <hr>
   <div class="content">
-    <section class="main-section" id="Sidebar_Two">
-        <header><h1>Sidebar Two</h1></header>
-        <p>The starting state of the menu will appear collapsed on smaller screens, and will appear non-collapsed on larger screens. When toggled using the button below, the menu will change.</p>
-        <p>Make sure to keep all page content within the <code>#page-content-wrapper</code>. The top navbar is optional, and just for demonstration. Just create an element with the <code>#menu-toggle</code> ID which will toggle the menu when clicked.</p>
-        <p>The HTML <code>button</code> tag defines a clickable button.</p>
-            <p>The CSS <code>background-color</code> property defines the background color of an element.</p>
-            <ol>
-                <li>Coffee</li>
-                <li>Tea</li>
-                <li>Milk</li>
-            </ol>
+    <section class="main-section" id="Font_Size">
+        <header><h1>Font Size</h1></header>
+        <p>The<code> font-size </code>property sets the size of a font.</p>
+        <h3>CSS Syntax</h3>
+        <p><code>font-size:medium|xx-small|x-small|small|large|x-large|xx-large|smaller|larger|length|initial|inherit;</code></p>
+            <p>
+                <table class="w3-table-all notranslate">
+                  <tbody><tr>
+                    <th style="width:14%">Value</th>
+                    <th>Description</th>
+                    <th>Play it</th>                
+                  </tr>
+                  <tr>
+                    <td>medium</td>
+                    <td>Sets the font-size to a medium size. This is default</td>
+                  <td><a target="_blank" class="w3-btn btnplayit" href="https://www.w3schools.com/cssref/playit.asp?filename=playcss_font-size&preval=medium">Play it »</a></td>        
+                  </tr>
+                  <tr>
+                    <td>xx-small</td>
+                    <td>Sets the font-size to an xx-small size</td>
+                  <td><a target="_blank" class="w3-btn btnplayit" href="https://www.w3schools.com/cssref/playit.asp?filename=playcss_font-size&preval=medium">Play it »</a></td>    
+                  </tr>
+                  <tr>
+                    <td>x-small</td>
+                    <td>Sets the font-size to an extra small size</td>
+                  <td><a target="_blank" class="w3-btn btnplayit" href="https://www.w3schools.com/cssref/playit.asp?filename=playcss_font-size&preval=medium">Play it »</a></td>        
+                  </tr>
+                  <tr>
+                    <td>small</td>
+                    <td>Sets the font-size to a small size</td>
+                     <td><a target="_blank" class="w3-btn btnplayit" href="https://www.w3schools.com/cssref/playit.asp?filename=playcss_font-size&preval=medium">Play it »</a></td>    
+                  </tr>
+                  <tr>
+                    <td>large</td>
+                    <td>Sets the font-size to a large size</td>
+                     <td><a target="_blank" class="w3-btn btnplayit" href="https://www.w3schools.com/cssref/playit.asp?filename=playcss_font-size&preval=medium">Play it »</a></td>    
+                  </tr>
+                  <tr>
+                    <td>x-large</td>
+                    <td>Sets the font-size to an extra large size</td>
+                     <td><a target="_blank" class="w3-btn btnplayit" href="playit.asp?filename=playcss_font-size&amp;preval=x-large">Play it »</a></td>    
+                  </tr>
+                  <tr>
+                    <td>xx-large</td>
+                    <td>Sets the font-size to an xx-large size</td>
+                  <td><a target="_blank" class="w3-btn btnplayit" href="https://www.w3schools.com/cssref/playit.asp?filename=playcss_font-size&preval=medium">Play it »</a></td>        
+                  </tr>
+                  <tr>
+                    <td>smaller</td>
+                    <td>Sets the font-size to a smaller size than the parent
+                      element</td>
+                       <td><a target="_blank" class="w3-btn btnplayit" href="https://www.w3schools.com/cssref/playit.asp?filename=playcss_font-size&preval=medium">Play it »</a></td>    
+                  </tr>
+                  <tr>
+                    <td>larger</td>
+                    <td>Sets the font-size to a larger size than the parent element</td>
+                     <td><a target="_blank" class="w3-btn btnplayit" href="https://www.w3schools.com/cssref/playit.asp?filename=playcss_font-size&preval=medium">Play it »</a></td>    
+                  </tr>
+                  <tr>
+                    <td><i>length</i></td>
+                    <td>Sets the font-size to a fixed size in px, cm, etc. <a href="css_units.asp">Read about length units</a></td>
+                     <td><a target="_blank" class="w3-btn btnplayit" href="playit.asp?filename=playcss_font-size&amp;preval=10px">Play it »</a></td>    
+                  </tr>
+                  <tr>
+                    <td><i>%</i></td>
+                    <td>Sets the font-size to a percent of&nbsp; the parent element's font size</td>
+                  <td><a target="_blank" class="w3-btn btnplayit" href="https://www.w3schools.com/cssref/playit.asp?filename=playcss_font-size&preval=medium">Play it »</a></td>    
+                  </tr>
+                  <tr>
+                    <td>initial</td>
+                    <td>Sets this property to its default value. <a href="css_initial.asp">Read about <em>initial</em></a></td>
+                  <td><a target="_blank" class="w3-btn btnplayit" href="https://www.w3schools.com/cssref/playit.asp?filename=playcss_font-size&preval=medium">Play it »</a></td>
+                    </tr>
+                  <tr>
+                    <td>inherit</td>
+                    <td>Inherits this property from its parent element. <a href="css_inherit.asp">Read about <em>inherit</em></a></td>
+                  <td></td>
+                    </tr>
+                </tbody></table>
+                </p>
+            <ul>
+                <li><a href="https://www.w3schools.com/cssref/playit.asp?filename=playcss_font-size&preval=medium">See Examples</a></li>
+            </ul>
         </section>
+        <br>
+        <br>
+        <hr>
   </div>
   <div class="content">
-    <section class="main-section" id="Sidebar_Three">
-        <header><h1>Sidebar Three</h1></header>
-        <p>The starting state of the menu will appear collapsed on smaller screens, and will appear non-collapsed on larger screens. When toggled using the button below, the menu will change.</p>
-        <p>Make sure to keep all page content within the <code>#page-content-wrapper</code>. The top navbar is optional, and just for demonstration. Just create an element with the <code>#menu-toggle</code> ID which will toggle the menu when clicked.</p>
-        <p>The HTML <code>button</code> tag defines a clickable button.</p>
-            <p>The CSS <code>background-color</code> property defines the background color of an element.</p>
-            <ol>
-                <li>Coffee</li>
-                <li>Tea</li>
-                <li>Milk</li>
-            </ol>
-        </section>
+            <section class="main-section" id="Display_Grid">
+                <header><h1>Display Grid</h1></header>
+                <p>The grid property is a shorthand property for:</p>
+                <ul>
+                    <li><a href="https://www.w3schools.com/cssref/pr_grid-template-rows.asp"> grid-template-rows</a></li>
+                    <li><a href="https://www.w3schools.com/cssref/pr_grid-template-columns.asp"> grid-template-columns</a></li>
+                    <li><a href="https://www.w3schools.com/cssref/pr_grid-template-areas.asp"> grid-template-areas</a></li>
+                    <li><a href="https://www.w3schools.com/cssref/pr_grid-auto-rows.asp"> grid-auto-rows</a></li>
+                    <li><a href="https://www.w3schools.com/cssref/pr_grid-auto-columns.asp"> grid-auto-columns</a></li>
+                    <li><a href="https://www.w3schools.com/cssref/pr_grid-auto-flow.asp"> grid-auto-flow</a></li>
+                </ul>
+                <h2>CSS Syntax</h2>
+                <p><code>grid: none|grid-template-rows / grid-template-columns|grid-template-areas|grid-template-rows / [grid-auto-flow] grid-auto-columns|[grid-auto-flow] grid-auto-rows / grid-template-columns|initial|inherit;</code></p>
+                <br>
+                <p><code>display: grid; </code><span style="color: green;">/* Makes the page responsive */</span><br>
+                    <code> grid-template-columns: auto auto auto auto;</code></p>
+                <br>
+                
+                 
+<table class="w3-table-all notranslate">
+    <tbody><tr>
+      <th style="width:24%">Value</th>
+      <th>Description</th>
+      <th>Play it</th>        
+    </tr>  
+    <tr>
+      <td>none</td>
+      <td>Default value. No specific sizing of the columns or rows</td>
+      <td></td> 
+    </tr>
+    <tr>
+      <td><i>grid-template-rows / grid-template-columns</i></td>
+      <td>Specifies the size(s) of the columns and rows</td>
+      <td><a target="_blank" class="w3-btn btnplayit" href="https://www.w3schools.com/cssref/playit.asp?filename=playcss_grid">Play it</a></td>
+    </tr>
+    <tr>
+      <td><i>grid-template-areas</i></td>
+      <td>Specifies the grid layout using named items</td>
+      <td><a target="_blank" class="w3-btn btnplayit" href="https://www.w3schools.com/cssref/playit.asp?filename=playcss_grid">Play it</a></td>
+    </tr>
+    <tr>
+      <td><i>grid-template-rows / grid-auto-columns</i></td>
+      <td>Specifies the size (height) of the rows, and the auto size of the 
+      columns</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><i>grid-auto-rows / grid-template-columns</i></td>
+      <td>Specifies the auto size of the rows, and sets the grid-template-columns 
+      property</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><i>grid-template-rows / grid-auto-flow grid-auto-columns</i></td>
+      <td>Specifies the size (height) of the rows, and how to place auto-placed 
+      items, and the auto size of the 
+      columns</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><i>grid-auto-flow grid-auto-rows / grid-template-columns</i></td>
+      <td>Specifies how to place auto-placed items, and the auto size of the rows, and sets the grid-template-columns 
+      property</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>initial</td>
+      <td>Sets this property to its default value. <em><a href="css_initial.asp">
+      Read about initial</a></em></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>inherit</td>
+      <td>Inherits this property from its parent element. Read about <em>
+      <a href="css_inherit.asp">inherit</a></em></td>
+      <td></td>
+    </tr>
+  </tbody></table>
+        <br>
+                    <ul>
+                        <li><a href="https://www.w3schools.com/cssref/playit.asp?filename=playcss_grid">See Examples >></a></li>
+                        <li><a href="https://www.w3schools.com/cssref/tryit.asp?filename=trycss_grid2">See More Examples >></a></li>
+                        <li><a href="https://www.w3schools.com/cssref/tryit.asp?filename=trycss_grid3">See More Examples >></a></li>
+                    </ul>
+                </section>
   </div>
+  <br>
+  <hr>
   <div class="content">
-    <section class="main-section" id="Sidebar_Fore">
-        <header><h1>Sidebar Fore</h1></header>
-        <p>The starting state of the menu will appear collapsed on smaller screens, and will appear non-collapsed on larger screens. When toggled using the button below, the menu will change.</p>
-        <p>Make sure to keep all page content within the <code>#page-content-wrapper</code>. The top navbar is optional, and just for demonstration. Just create an element with the <code>#menu-toggle</code> ID which will toggle the menu when clicked.</p>
-        <p>The HTML <code>button</code> tag defines a clickable button.</p>
-            <p>The CSS <code>background-color</code> property defines the background color of an element.</p>
-            <ol>
-                <li>Coffee</li>
-                <li>Tea</li>
-                <li>Milk</li>
-            </ol>
-        </section>
+            <section class="main-section" id="Transition_Color">
+                <header><h1>Transition Color</h1></header>
+                <p>The <code>transition</code> property is a shorthand property for:</p>
+                <ul>
+                    <li><a href="https://www.w3schools.com/cssref/css3_pr_transition-property.asp"> transition-property</a></li>
+                    <li><a href="https://www.w3schools.com/cssref/css3_pr_transition-duration.asp"> transition-duration</a></li>
+                    <li><a href="https://www.w3schools.com/cssref/css3_pr_transition-timing-function.asp"> transition-timing-function</a></li>
+                    <li><a href="https://www.w3schools.com/cssref/css3_pr_transition-delay.asp"> transition-delay</a></li>
+                </ul>
+                <h2>CSS Syntax</h2>
+                <p><code>transition: property duration timing-function delay|initial|inherit;</code></p>
+                <span><code>Transition:color 150ms;</code> <span style="color: green;"> /* You can change the color change speed (Sellega saab muuta värvi vahetuse kiirust) */ </span><br>
+                    <code> ....:hover</code> <span style="color: green;"> /* Here, hovering over a text changes the color (Siin siis hiirega mingi teksti peale minnes muudab värvi) */</span></p>
+                
+<table class="w3-table-all notranslate">
+    <tbody><tr>
+      <th style="width:20%">Value</th>
+      <th>Description</th>
+    </tr>  
+    <tr>
+      <td><i><strong>transition-property</strong></i></td>
+      <td>Specifies the name of the CSS property the transition effect is for</td>
+    </tr>
+    <tr>
+      <td><i><strong>transition-duration</strong></i></td>
+      <td>Specifies how many seconds or milliseconds the transition effect takes to complete</td>
+    </tr>
+    <tr>
+      <td><i><strong>transition-timing-function</strong></i></td>
+      <td>Specifies the speed curve of the transition effect</td>
+    </tr>
+    <tr>
+      <td><i><strong>transition-delay</strong></i></td>
+      <td>Defines when the transition effect will start</td>
+    </tr>
+    <tr>
+      <td>initial</td>
+      <td>Sets this property to its default value. <a href="css_initial.asp">Read about <em>initial</em></a></td>
+      </tr>
+    <tr>
+      <td>inherit</td>
+      <td>Inherits this property from its parent element. <a href="css_inherit.asp">Read about <em>inherit</em></a></td>
+      </tr>
+  </tbody></table>
+  
+                    <ul>
+                        <li><a href="https://www.w3schools.com/cssref/tryit.asp?filename=trycss3_transition">More Examples</a></li>
+                        <li><a href="https://www.w3schools.com/cssref/tryit.asp?filename=trycss_dim_width_inputfocus">Read More</a></li>
+                    </ul>
+                </section>
   </div>
+  <hr>
   <div class="content">
-    <section class="main-section" id="Sidebar_Five">
-        <header><h1>Sidebar Five</h1></header>
-        <p>The starting state of the menu will appear collapsed on smaller screens, and will appear non-collapsed on larger screens. When toggled using the button below, the menu will change.</p>
-        <p>Make sure to keep all page content within the <code>#page-content-wrapper</code>. The top navbar is optional, and just for demonstration. Just create an element with the <code>#menu-toggle</code> ID which will toggle the menu when clicked.</p>
-        <p>The HTML <code>button</code> tag defines a clickable button.</p>
-            <p>The CSS <code>background-color</code> property defines the background color of an element.</p>
-            <ol>
-                <li>Coffee</li>
-                <li>Tea</li>
-                <li>Milk</li>
-            </ol>
-        </section>
-  </div>
-  <div class="content">
-    <section class="main-section" id="Sidebar_Six">
-        <header><h1>Sidebar Six</h1></header>
-        <p>The starting state of the menu will appear collapsed on smaller screens, and will appear non-collapsed on larger screens. When toggled using the button below, the menu will change.</p>
-        <p>Make sure to keep all page content within the <code>#page-content-wrapper</code>. The top navbar is optional, and just for demonstration. Just create an element with the <code>#menu-toggle</code> ID which will toggle the menu when clicked.</p>
-        <p>The HTML <code>button</code> tag defines a clickable button.</p>
-            <p>The CSS <code>background-color</code> property defines the background color of an element.</p>
-            <ol>
-                <li>Coffee</li>
-                <li>Tea</li>
-                <li>Milk</li>
-            </ol>
-        </section>
+            <section class="main-section" id="Justify_Content">
+                <header><h1>Justify Content</h1></header>
+                <p>The<code> justify-content</code> property aligns the flexible container's items when the items do not use all available space on the main-axis (horizontally).</p>
+                <p><strong>Tip:</strong> Use the<code> align-items</code> property to align the items vertically.</p>
+                <h2>CSS Syntax</h2>
+                <p><code>justify-content: flex-start|flex-end|center|space-between|space-around|initial|inherit;</code></p>
+            <table class="w3-table-all notranslate">
+                <tbody><tr>
+                <th style="width:22%">Value</th>
+                <th style="width:68%">Description</th>
+                <th style="width:10%">Play it</th>    
+                </tr>
+                <tr>
+                <td>flex-start</td>
+                <td>Default value. Items are positioned at the beginning of the container</td>
+                <td><a target="_blank" class="w3-btn btnplayit" href="https://www.w3schools.com/cssref/playit.asp?filename=playcss_justify-content&preval=flex-start">Play it »</a></td>          
+                </tr>
+                <tr>
+                <td>flex-end</td>
+                <td>Items are positioned at the end of the container</td>
+                <td><a target="_blank" class="w3-btn btnplayit" href="https://www.w3schools.com/cssref/playit.asp?filename=playcss_justify-content&preval=flex-start">Play it »</a></td>          
+                </tr>
+                <tr>
+                <td>center</td>
+                <td>Items are positioned at the center of the container</td>
+                <td><a target="_blank" class="w3-btn btnplayit" href="https://www.w3schools.com/cssref/playit.asp?filename=playcss_justify-content&preval=flex-start">Play it »</a></td>          
+                </tr>
+                <tr>
+                <td>space-between</td>
+                <td>Items are positioned with space between the lines</td>
+                <td><a target="_blank" class="w3-btn btnplayit" href="https://www.w3schools.com/cssref/playit.asp?filename=playcss_justify-content&preval=flex-start">Play it »</a></td>          
+                </tr>
+                <tr>
+                <td>space-around</td>
+                <td>Items are positioned with space before, between, and after the lines</td>
+                <td><a target="_blank" class="w3-btn btnplayit" href="https://www.w3schools.com/cssref/playit.asp?filename=playcss_justify-content&preval=flex-start">Play it »</a></td>          
+                </tr>
+                <tr>
+                <td>initial</td>
+                <td>Sets this property to its default value. <a href="css_initial.asp">Read about <em>initial</em></a></td>
+                <td><a target="_blank" class="w3-btn btnplayit" href="https://www.w3schools.com/cssref/playit.asp?filename=playcss_justify-content&preval=flex-start">Play it »</a></td>          
+                </tr>
+                <tr>
+                <td>inherit</td>
+                <td>Inherits this property from its parent element. <a href="css_inherit.asp">Read about <em>inherit</em></a></td>
+                <td></td>
+                </tr>
+                </tbody></table>
+  
+                    <ul>
+                        <li><a href="https://www.w3schools.com/cssref/playit.asp?filename=playcss_justify-content&preval=flex-start">Read More</a></li>
+                        <li><a href="https://www.w3schools.com/cssref/tryit.asp?filename=trycss3_justify-content3">More Examples</a></li>
+                    </ul>
+                </section>
   </div>
   </main> 
   </div>

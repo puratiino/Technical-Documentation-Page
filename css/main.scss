@@ -1,6 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+
 body {
   margin: 0;
-  font-family: "Lato", sans-serif;
+  font-family: "Montserrat", sans-serif;
+}
+
+h1 {
+  text-transform: uppercase;
+}
+
+*,
+li {
+  text-decoration: none;
 }
 
 /* The side navigation menu */
@@ -15,6 +26,10 @@ body {
 
 #navbar .topnav {
   overflow: hidden;
+}
+
+#navbar {
+  position: fixed;
 }
 
 /* Sidebar links */
@@ -54,16 +69,36 @@ code {
   font-size: 105%;
 }
 
+.w3-code {
+  padding: 8px 20px;
+  margin: 24px -20px;
+  box-shadow: none !important;
+  background-color: #f1f1f1;
+}
+
+/*Table*/
+table,
+th,
+tr,
+td {
+  border: 1px solid black;
+}
+
 @media screen and (max-width: 520px) {
   div.main-body {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-areas: "topnav" "main-section";
+    grid-template-areas: "#navbar" "main-section";
   }
   #navbar .topnav {
     position: inherit;
     width: 100%;
   }
+
+  #navbar {
+    position: relative;
+  }
+
   div.content {
     margin-left: 0;
   }
